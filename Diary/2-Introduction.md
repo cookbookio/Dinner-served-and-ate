@@ -12,3 +12,11 @@ Chosen language: javascript with node.js and react frameworks
 
 Where is the code today?
 - The code was already updated to newer python 3.x instead of 2.x
+
+
+Diary 2 feb
+after setup with javascipt using ai nikoletas version
+changes documented in migration_guide
+
+to run projekt
+- for windoes choco install nodejs
