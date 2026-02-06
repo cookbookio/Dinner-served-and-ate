@@ -35,10 +35,6 @@ Projektet bruger den eksisterende SQLite databasefil `app.db` i roden.
 Hvis du vil pege på en anden databasefil, sæt env variablen:
 - `DB_PATH=/path/to/app.db`
 
-## Legacy (Flask)
-
-Den gamle Flask app ligger i `legacy-flask/app.py` (med `legacy-flask/templates/` og `legacy-flask/static/`), men den bruges ikke længere af Next.js.
-
 ## Mappe overblik
 ```
 legacy/
