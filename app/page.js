@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 async function getRecipes() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3005';
   const res = await fetch(`${baseUrl}/api/recipe/recipes/`, { cache: 'no-store' });
   if (!res.ok) {
     throw new Error(`Failed to fetch recipes: ${res.status}`);

@@ -1,4 +1,4 @@
-![Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejA0ZXBnNHBra3ZtYTJycDA1OHh4b244MWhrdzhocjg4NWVxeTB0YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyKfqRxVbzciY/giphy.gif)
+npm![Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejA0ZXBnNHBra3ZtYTJycDA1OHh4b244MWhrdzhocjg4NWVxeTB0YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyKfqRxVbzciY/giphy.gif)
 # Dinner-served-and-ate
 
 Dette repo er migreret til **Next.js + React** for brugerflade og funktionalitet.
@@ -12,7 +12,7 @@ Krav: Node.js 18+.
 2. Start dev-server:
 	- `npm run dev`
 3. Åbn:
-	- `http://localhost:3000/`
+	- `http://localhost:3005/`
 
 ## Funktionalitet
 

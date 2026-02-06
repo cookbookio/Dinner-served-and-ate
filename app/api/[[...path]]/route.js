@@ -17,7 +17,7 @@ function jsonMethodNotAllowed() {
 }
 
 function apiOverview() {
-  const base = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+  const base = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3005';
   return NextResponse.json(
     {
       create_user_url: `${base}/api/user/create/`,
