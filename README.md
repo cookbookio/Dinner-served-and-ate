@@ -1,66 +1,143 @@
-npm![Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejA0ZXBnNHBra3ZtYTJycDA1OHh4b244MWhrdzhocjg4NWVxeTB0YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyKfqRxVbzciY/giphy.gif)
-# Dinner-served-and-ate
-
-Dette repo er migreret til **Next.js + React** for brugerflade og funktionalitet.
+# 😋 Dinner served and ate - the ultimate cookboook 🍳🥘
+![Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejA0ZXBnNHBra3ZtYTJycDA1OHh4b244MWhrdzhocjg4NWVxeTB0YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyKfqRxVbzciY/giphy.gif)
 
 
+---
 
-# How to see our stuff with docker
-frontend : http://localhost:4000
-checkout data like this http://localhost:5000/api/recipe/tags
-swagger api overview: http://localhost:4000/swagger 
+A cookbook with hot recipes for your inner diva🫦 
+
+The application deploys with Azure Virtual Machine and uses Docker. 
+The application is migrated to **Next.js + React**
+
+--- 
+
+<div style="background-color:#ffe6f2;padding:10px;border-radius:8px; color: Black;">
+✨ This project uses Azure VM✨
+</div>
+
+## Deployment live 🤤🍜
+* Frontend - ipadresse coming in hot soon
+* Backend API - //-
+* API Dumentation swagger - -//-
+
+--- 
+<h2 style="color:#ff69b4;">Tech Stack 🍴</h2>
+
+<h3 style="color:#ff69b4;"> Backend 🍴</h3>
+
+* 🌟Javascript
+* 🍩Node
+* 🍬Express
+* 🪅better-SQLite3
+
+<h3 style="color:#ff69b4;">Frontend🍴</h3>
+
+* ⚛️ React
+* 🍩Next
+
+<h3 style="color:#ff69b4;">API Documentation🍴</h3>
+
+* 🍰Swagger
 
 
-## Kør projektet
- 
-Krav: Node.js 18+.
+<h3 style="color:#ff69b4;"> Infrastructure 🥣 </h3>
+- ☁️ Azure 
+- 🍬Ubunto
+- 🌟Docker Compose
 
-### Metode 1: Lokal udvikling (uden Docker)
-1. Installer dependencies:
+
+<h2 style="color:#ff69b4;"> Project Structure 😋🍣🍽️ </h2>
+
+```
+DINNER-SERVED-AT-ATE/
+│
+├── .github/
+│   ├── workflows/
+│   └── templates           # for issues and pull requests
+│
+├── READMEs/                # Own notes and details
+│ 
+├── backend/                # Express backend API
+│   ├── index.js
+│   ├── db.js
+│   ├── app.db
+│   ├── package.json
+│   ├── package-lock.json
+│   └── Dockerfile
+│
+├── frontend/               # React frontend
+│   ├── api/
+│   │   └──route.js
+│   ├── recipes/
+│   │   └──page.js
+│   ├── swagger/            # API pecification page
+│   │   ├──api-schema.yaml
+│   │   ├──page.js 
+│   │   └──SwaggerUIClient.jsx
+│   ├── page.js
+│   ├── layout.js
+│   ├── package.json
+│   ├── global.css
+│   └── Dockerfile
+│
+├── docker-compose.yml     # Docker orchestration
+├── Azure-VM-script.ps1    # Script for VM etc
+└── README.md
+```
+
+---
+
+<h2 style="color:#ff69b4;"> Deployment on your own VM 🍜🍜 </h2>
+- Make sure to have a ssh key on your computer ?
+- Fork repo 
+- Open ```Azure-VM-script.ps1```
+- Change ```$location = "norwayeast"``` to a location available to your azure account
+
+
+<h2 style="color:#ff69b4;"> Running Locally with Docker 🍳 </h2>
+Preconditions:
+- Docker Desktop installed and open
+
+
+### Acces overview - with Docker
+Frontend : http://localhost:4000
+
+Backend API : http://localhost:5000/api/     # see API overview for rutes
+
+API overview with Swagger : http://localhost:4000/swagger 
+
+1. **Start applikation:**
+   ```bash
+   docker-compose up
+   ```
+
+2. **Stop applikation:**
+   ```bash
+   docker-compose down
+   ```
+
+--- 
+
+<h2 style="color:#ff69b4;"> Run projekt locally (without Docker) 🍳 🍳 </h2>
+Requirements: Node.js 18+
+
+**Note:** Docker uses port 4000, local development uses port 3005.
+
+1. Install dependencies:
 	- `npm install`
 2. Start dev-server:
 	- `npm run dev`
-3. Åbn	- `http://localhost:3005/`
+3. Open	- `http://localhost:3005/`
 
-### Metode 2: Med Docker (KIK HER)
-Krav: [Docker Desktop](https://www.docker.com/products/docker-desktop/) installeret og kørende.
+---
 
-1. **Start applikationen:**
-   ```bash
-   docker-compose up
-   ```
-   Applikationen vil være tilgængelig på `http://localhost:4000/`
-
-2. **Stop applikationen:**
-   - Tryk `Ctrl+C` i terminalen, eller
-   ```bash
-   docker-compose down
-   ```
-
-3. **Genstart efter kodeændringer:**
-   - Hot reload er aktiveret - dine ændringer vises automatisk
-   - Ved dependency ændringer (package.json):
-   ```bash
-   docker-compose down
-   docker-compose up --build
-   ```
-
-4. **Reset database:**
-   ```bash
-   docker-compose down -v
-   docker-compose up
-   ```
-
-
-**Note:** Docker bruger port 4000, lokal udvikling bruger port 3005.
-
-## API dokumentation
+<h2 style="color:#ff69b4;"> API dokumentation 🍜 </h2>
 
 - OpenAPI spec: [api-schema.yaml](api-schema.yaml)
 - API overview (Markdown): [API_OVERVIEW.md](API_OVERVIEW.md)
-- Swagger UI (lokalt): `http://localhost:3002/swagger/`
+- Checkout the swagger documentation page
 
-## Funktionalitet
+<h2 style="color:#ff69b4;"> Funktionality 🍝</h2>
 
 - UI:
   - `/` viser alle opskrifter
@@ -74,42 +151,16 @@ Krav: [Docker Desktop](https://www.docker.com/products/docker-desktop/) installe
   - `/api/recipe/tags/` + `/api/recipe/tags/{id}/` (id endpoints er stubs)
   - `/api/user/*` (simple demo endpoints)
 
-## Database
+<h2 style="color:#ff69b4;"> Database 🍴 </h2>
+Uses legacy SQLite database 
+`app.db`
 
-Projektet bruger den eksisterende SQLite databasefil `app.db` i roden.
-
-Hvis du vil pege på en anden databasefil, sæt env variablen:
+Wanna use your own database with delicios meals? 
+Change here
 - `DB_PATH=/path/to/app.db`
 
-## Mappe overblik
-```
-.
-├─ api-schema.yaml
-├─ architecutreIdeaLINEA.md
-├─ jsconfig.json
-├─ next.config.mjs
-├─ package.json
-├─ README.md
-├─ .gitignore
-├─ .dockerignore
-├─ Dockerfile
-├─ docker-compose.yml
-├─ app/
-│  ├─ globals.css
-│  ├─ layout.js
-│  ├─ page.js
-│  ├─ api/
-│  │  └─ [[...path]]/
-│  │     └─ route.js
-│  └─ recipes/
-│     └─ [id]/
-│        └─ page.js
-├─ lib/
-│  └─ db.js
-└─ Diary/
-  ├─ 2-Introduction.md
-  └─ ToDoList.md
-
-node_modules/          (generated by `npm install`)
-.next/                 (generated by Next.js build)
-```
+<h2 style="color:#ff69b4;"> Team: Ostemadsprincesse 🫶👨🏼‍🍳</h2>
+- Føen
+- Jonas
+- Nikoleta
+- Linea
