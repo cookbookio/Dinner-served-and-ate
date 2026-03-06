@@ -87,11 +87,13 @@ DINNER-SERVED-AT-ATE/
 
 ---
 
-<h2 style="color:#ff69b4;"> Deployment on your own VM 🍜🍜 </h2>
+<h2 style="color:#ff69b4;"> Deployment on your own VM 🍜🍜  - using our cool script :) </h2>
 - Make sure to have a ssh key on your computer ?
 - Fork repo 
 - Open ```Azure-VM-script.ps1```
 - Change ```$location = "norwayeast"``` to a location available to your azure account
+- In powershell: ```powershell -ExecutionPolicy Bypass -File .\Azure-VM-script.ps1```
+- Log in to your Azure account
 
 
 <h2 style="color:#ff69b4;"> Running Locally with Docker 🍳 </h2>

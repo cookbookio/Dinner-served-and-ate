@@ -9,9 +9,8 @@ https://github.com/cookbookio/EK_ITA_Agil_Cloud_Ita_2026_Spring/blob/master/06._
 # GitHub actions
 We made 
 - ISSUE_TEMPLATE.md 
-    - Does it work like it should ? Ask Claus soon..
     - It creates a message after someone makes an new issue
+    - I dont think it works..
 - PULL_REQUEST_TEMPLATE.md
-    - It needs some SPARKLE 
-    - Its is a template for a ... commit-message to a pull request ???
+    - Its is a template for pull request descriptions
     - The template is here to make sure everybody writes nice and descriptive messages
