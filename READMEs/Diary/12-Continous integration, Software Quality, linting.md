@@ -16,5 +16,6 @@ Vi skal alle sammen på vores egen computer inde i .ssh
 Hvordan ssh'er du ind til VM?
 Like this: 
 ssh -i C:\Users\linea\.ssh\DINNERKEY\id_rsa azureuser@20.100.197.76
+
 Der er blevet oprette en ny docker-compose fil, som kun anvender vores images fra GitHub uden at køre alt koden.
 Filen køres med deen komamndo: docker compose -f docker-compose.deploy.yml up -d
