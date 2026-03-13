@@ -35,7 +35,7 @@ LOCATION="norwayeast"  # Change to your preferred region (e.g., "eastus", "north
 VM_NAME="dinner-served-and-ate-vm"
 VM_SIZE="Standard_B2ats_v2"  # Change to "Standard_B2s" for better performance
 ADMIN_USERNAME="azureuser"
-SSH_KEY_PATH="$HOME/.ssh/id_rsa.pub"   # Change this path to point at your public key - (your private key should be in the same folder, and should be set in SSH_PRIVATE_KEY on GitHub)
+SSH_KEY_PATH="$HOME/.ssh/DINNERKEY/id_rsa.pub"   # Change this path to point at your public key - (your private key should be in the same folder, and should be set in SSH_PRIVATE_KEY on GitHub)
 
 # Disable all color output
 GREEN=''
