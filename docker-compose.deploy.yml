@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   backend:
     image: ghcr.io/ostemadprinsesse/dinner-served-backend:latest
@@ -17,14 +15,28 @@ services:
     container_name: dinner-served-frontend
     restart: unless-stopped
     ports:
-      - "80:3005"
+      - "3005:3005"
     environment:
       - NEXT_PUBLIC_BASE_URL=http://backend:5000
     depends_on:
       - backend
     networks:
       - dinner-network
-
+  nginx:
+    image: nginx:latest
+    build:
+      context: ./network
+      dockerfile: Dockerfile
+    container_name: dinner-served-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - dinner-network
+      
 volumes:
   sqlite-data:
     name: dinner-served-sqlite
