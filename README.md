@@ -12,8 +12,20 @@ The application is migrated to **Next.js + React**
 --- 
 
 <div style="background-color:#ffe6f2;padding:10px;border-radius:8px; color: Black;">
-✨ This project uses Azure VM✨
+✨ This project uses Azure VM og nginx✨
 </div>
+
+## Deployment locally via nginx and docker
+In VS code terminal: (remember to opn docker desktop)
+docker compose -f docker-compose.deploy.yml up --build
+
+Vil der starte følgende cotainere
+- frontend
+- backend
+- nginx
+
+Og man kan **se frontend gennem nginx på: localhost:80**, mens man (for now?) stadig kan se "direkte på frontend" fra frontend containeren på localhost:3005 som normalt
+
 
 ## Deployment live 🤤🍜
 * Frontend - ipadresse coming in hot soon
